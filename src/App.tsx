@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <>
-      <div>Wanna check the palindrome!!</div>
+      <Header></Header>
     </>
   );
 }
