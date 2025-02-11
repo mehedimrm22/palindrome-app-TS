@@ -1,28 +1,19 @@
-import { useState } from "react";
-import isPalindrome from "../../utils/palindromeChecker";
+import React from "react";
 
 interface InputProps {
-  setResult: (result: boolean) => void;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ setResult }: InputProps) => {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleChange = () => {
-    const result = isPalindrome("userInput");
-    setResult(result);
-    setInputValue("");
-  };
-
+const Input: React.FC<InputProps> = ({ value, onChange }) => {
   return (
-    <div>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button onClick={handleChange}>Check</button>
-    </div>
+    <input
+      type="text"
+      value={value}
+      onChange={onChange}
+      placeholder="Enter text..."
+      className="border p-2 rounded-md"
+    />
   );
 };
 
