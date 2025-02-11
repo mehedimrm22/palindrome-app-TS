@@ -5,3 +5,7 @@
 - React
 - TypeScript
 - Vite
+
+## Author
+
+- Md Mahmudur Rahman
